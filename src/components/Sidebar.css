@@ -1,0 +1,61 @@
+.pinnos-sidebar{
+    width: 240px;
+    min-height: 100vh;
+    background-color: #18120f;
+    border-right: 1px solid #2d241c;
+    padding: 20px;
+}
+
+.logo{
+    color: #f97316;
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+}
+
+.nav-item{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    color: #d6c5b4;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-item.active{
+    background-color: #f97316;
+    color: #fff7ed;
+}
+
+.nav-item:hover{
+    background-color: #35251c;
+    color: #fff7ed;
+}
+
+.nav-item.active:hover{
+    background-color: #ea580c;
+}
+
+@media (max-width: 760px) {
+    .pinnos-sidebar {
+        width: 100%;
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid #2d241c;
+    }
+
+    .logo {
+        margin-bottom: 18px;
+    }
+
+    .pinnos-sidebar nav {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+    }
+
+    .nav-item {
+        flex: 0 0 auto;
+    }
+}

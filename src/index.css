@@ -1,0 +1,12 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body{
+  background-color: #0d0b0a;
+  color: #f5e9dc;
+  overflow-y: auto;
+}
