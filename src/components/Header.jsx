@@ -1,21 +1,7 @@
 import "./Header.css";
-import { Clock, Phone, Search, X } from "lucide-react";
-import { useRef, useState } from "react";
+import { Clock, Phone } from "lucide-react";
 
-export function Header({ search, setSearch }) {
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const inputRef = useRef(null);
-
-  const openSearch = () => {
-    setIsSearchOpen(true);
-    window.requestAnimationFrame(() => inputRef.current?.focus());
-  };
-
-  const closeSearch = () => {
-    setSearch("");
-    setIsSearchOpen(false);
-  };
-
+export function Header() {
   return (
     <header className="pinnos-header">
       <div className="user-info">
@@ -25,27 +11,7 @@ export function Header({ search, setSearch }) {
         <p>Cardápio digital com pratos, drinks e combos da casa</p>
       </div>
 
-      <div className={`search-bar ${isSearchOpen ? "open" : ""}`}>
-        {isSearchOpen ? (
-          <>
-            <Search size={18} color="#9ca3af" />
-            <input
-              ref={inputRef}
-              type="text"
-              placeholder="Buscar item, categoria ou ingrediente..."
-              value={search}
-              onChange={(event) => setSearch(event.target.value)}
-            />
-            <button className="search-close-btn" onClick={closeSearch} aria-label="Fechar pesquisa">
-              <X size={18} />
-            </button>
-          </>
-        ) : (
-          <button className="search-toggle-btn" onClick={openSearch} aria-label="Abrir pesquisa">
-            <Search size={20} />
-          </button>
-        )}
-      </div>
+      {/* A barra de pesquisa antiga que ficava aqui foi removida */}
 
       <div className="header-actions">
         <div className="badge">

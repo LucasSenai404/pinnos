@@ -87,10 +87,17 @@ function App() {
 
   return (
     <div className="pinnos-app">
-      <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
+      {/* ALTERAÇÃO AQUI: Passando as props de busca para a Sidebar */}
+      <Sidebar 
+        activeTab={activeTab} 
+        setActiveTab={setActiveTab} 
+        search={search} 
+        setSearch={setSearch} 
+      />
 
       <main className="pinnos-main">
-        <Header search={search} setSearch={setSearch} />
+        {/* ALTERAÇÃO AQUI: O Header não precisa mais receber as props de busca */}
+        <Header />
 
         <div className={`pinnos-content ${activeTab === "home" && !showSearchResults ? "home-content" : ""}`}>
           {activeTab === "home" && !showSearchResults ? (
