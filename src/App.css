@@ -1,43 +1,53 @@
-.pinnos-app{
+.pinnos-app {
+  --top-nav-height: 78px;
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  background: #0d0b0a;
+  background: linear-gradient(135deg, #06070a 0%, #0b0d10 48%, #120e0d 100%);
 }
 
-.pinnos-main{
+.pinnos-main {
   flex: 1;
   display: flex;
   flex-direction: column;
   min-width: 0;
 }
 
-.pinnos-content{
-  padding: 40px;
+.pinnos-content {
+  width: min(1560px, 100%);
+  margin: 0 auto;
+  padding: 42px 40px 56px;
 }
 
-.section-title{
-  margin-bottom: 25px;
-  border-left: 4px solid #f97316;
+.pinnos-content.home-content {
+  padding-top: 30px;
+}
+
+.section-title {
+  margin-bottom: 26px;
+  border-left: 4px solid #ff7a1a;
   color: #fff7ed;
   padding-left: 15px;
+  font-size: 1.65rem;
 }
 
-.pinnos-grid{
+.pinnos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 22px;
 }
 
 .empty-message {
-  color: #94a3b8;
+  color: #b7c0ca;
 }
 
 .about-panel {
-  max-width: 720px;
-  padding: 28px;
-  background: #18120f;
-  border: 1px solid #35251c;
+  max-width: 760px;
+  padding: 30px;
+  background: linear-gradient(135deg, #15171b, #12100f);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 8px;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.24);
 }
 
 .about-panel h3 {
@@ -46,7 +56,7 @@
 }
 
 .about-panel p {
-  color: #d6c5b4;
+  color: #d9cdbf;
   line-height: 1.6;
 }
 
@@ -54,16 +64,13 @@
   display: grid;
   gap: 10px;
   margin-top: 22px;
-  color: #facc15;
+  color: #fbbf24;
+  font-weight: 700;
 }
 
 @media (max-width: 760px) {
-  .pinnos-app {
-    flex-direction: column;
-  }
-
   .pinnos-content {
-    padding: 24px 18px;
+    padding: 24px 18px 42px;
   }
 
   .pinnos-grid {

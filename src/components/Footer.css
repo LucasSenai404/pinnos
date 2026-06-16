@@ -1,0 +1,135 @@
+.pinnos-footer {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
+  gap: 24px;
+  align-items: stretch;
+  overflow: hidden;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(21, 23, 27, 0.98), rgba(18, 16, 15, 0.98)),
+    #12100f;
+  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.28);
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.footer-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fbbf24;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.footer-info h2 {
+  margin-top: 10px;
+  color: #fff7ed;
+  font-size: 1.8rem;
+  line-height: 1.1;
+}
+
+.footer-info p {
+  max-width: 590px;
+  margin-top: 12px;
+  color: #d9cdbf;
+  line-height: 1.65;
+}
+
+.footer-details {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.footer-detail {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  color: #f5e9dc;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.footer-detail svg {
+  flex: 0 0 auto;
+  color: #ff7a1a;
+}
+
+.footer-detail span {
+  min-width: 0;
+  line-height: 1.35;
+}
+
+.footer-map {
+  position: relative;
+  min-height: 280px;
+  overflow: hidden;
+  border: 1px solid rgba(251, 191, 36, 0.24);
+  border-radius: 8px;
+  background: #09090b;
+}
+
+.footer-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  border: 0;
+  filter: saturate(0.95) contrast(1.02);
+}
+
+.footer-route-btn {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 14px;
+  border-radius: 8px;
+  color: #fff7ed;
+  background: linear-gradient(135deg, #ff7a1a, #e11d48);
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease;
+}
+
+.footer-route-btn:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .pinnos-footer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .pinnos-footer {
+    padding: 18px;
+  }
+
+  .footer-info h2 {
+    font-size: 1.45rem;
+  }
+
+  .footer-map,
+  .footer-map iframe {
+    min-height: 240px;
+  }
+}

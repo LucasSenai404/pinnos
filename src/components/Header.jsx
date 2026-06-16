@@ -22,13 +22,13 @@ export function Header({ search, setSearch }) {
         <h3>
           Bem-vindo ao <span className="highlight">Pinnos Bar & Boliche</span>
         </h3>
-        <p>Cardápio digital com pratos e drinks da casa</p>
+        <p>Cardápio digital com pratos, drinks e combos da casa</p>
       </div>
 
       <div className={`search-bar ${isSearchOpen ? "open" : ""}`}>
         {isSearchOpen ? (
           <>
-            <Search size={18} color="#94a3b8" />
+            <Search size={18} color="#9ca3af" />
             <input
               ref={inputRef}
               type="text"

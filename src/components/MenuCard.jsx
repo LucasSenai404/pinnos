@@ -23,8 +23,8 @@ export function MenuCard({
                 >
                     <Heart
                         size={15}
-                        fill={isFavorite ? "#bc0000" : "transparent"}
-                        stroke={isFavorite ? "#ffffff" : "white"}
+                        fill={isFavorite ? "currentColor" : "transparent"}
+                        stroke="currentColor"
                     />
                 </button>
                 <h4>{title}</h4>

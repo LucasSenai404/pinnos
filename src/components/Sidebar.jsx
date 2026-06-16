@@ -1,31 +1,35 @@
 import "./Sidebar.css";
-import { Heart, Info, UtensilsCrossed } from "lucide-react";
+import { Heart, Home, Info, UtensilsCrossed } from "lucide-react";
+
+const navItems = [
+  { id: "home", label: "Início", icon: <Home size={20} /> },
+  { id: "menu", label: "Cardápio", icon: <UtensilsCrossed size={20} /> },
+  { id: "favorites", label: "Favoritos", icon: <Heart size={20} /> },
+  { id: "about", label: "Sobre", icon: <Info size={20} /> },
+];
 
 export function Sidebar({ activeTab, setActiveTab }) {
-    return (
-        <aside className="pinnos-sidebar">
-            <h2 className="logo">Pinnos Bar</h2>
+  return (
+    <aside className="pinnos-sidebar">
+      <div className="brand-block">
+        <h2 className="logo">Pinnos</h2>
+        <span>Bar & Boliche</span>
+      </div>
 
-            <nav>
-                <div
-                    className={`nav-item ${activeTab === "menu" ? "active" : ""}`}
-                    onClick={() => setActiveTab("menu")}
-                >
-                    <UtensilsCrossed size={20}/>Cardápio
-                </div>
-                <div
-                    className={`nav-item ${activeTab === "favorites" ? "active" : ""}`}
-                    onClick={() => setActiveTab("favorites")}
-                >
-                    <Heart size={20}/>Favoritos
-                </div>
-                <div
-                    className={`nav-item ${activeTab === "about" ? "active" : ""}`}
-                    onClick={() => setActiveTab("about")}
-                >
-                    <Info size={20}/>Sobre
-                </div>
-            </nav>
-        </aside>
-    );
+      <nav aria-label="Navegação principal">
+        {navItems.map(({ id, label, icon }) => (
+          <button
+            key={id}
+            type="button"
+            className={`nav-item ${activeTab === id ? "active" : ""}`}
+            onClick={() => setActiveTab(id)}
+            aria-current={activeTab === id ? "page" : undefined}
+          >
+            {icon}
+            {label}
+          </button>
+        ))}
+      </nav>
+    </aside>
+  );
 }
